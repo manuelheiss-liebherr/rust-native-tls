@@ -262,10 +262,10 @@ impl<S> From<ErrorStack> for HandshakeError<S> {
 
 #[derive(Clone)]
 pub struct TlsConnector {
-    connector: SslConnector,
-    use_sni: bool,
-    accept_invalid_hostnames: bool,
-    accept_invalid_certs: bool,
+    pub connector: SslConnector,
+    pub use_sni: bool,
+    pub accept_invalid_hostnames: bool,
+    pub accept_invalid_certs: bool,
 }
 
 impl TlsConnector {

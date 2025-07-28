@@ -464,7 +464,7 @@ impl TlsConnectorBuilder {
 /// println!("{}", String::from_utf8_lossy(&res));
 /// ```
 #[derive(Clone, Debug)]
-pub struct TlsConnector(imp::TlsConnector);
+pub struct TlsConnector(pub imp::TlsConnector);
 
 impl TlsConnector {
     /// Returns a new connector with default settings.
